@@ -27,6 +27,7 @@
 		DC235B091838FF3900070F2E /* iHasApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235B071838FF3900070F2E /* iHasApp.m */; };
 		DC235B0A1838FF3900070F2E /* schemeApps.json in Resources */ = {isa = PBXBuildFile; fileRef = DC235B081838FF3900070F2E /* schemeApps.json */; };
 		DC235B0C183907DC00070F2E /* startbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B0B183907DC00070F2E /* startbutton@2x.png */; };
+		DC235B1418390FB400070F2E /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235B1318390FB400070F2E /* MZTimerLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		DC235B071838FF3900070F2E /* iHasApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHasApp.m; sourceTree = "<group>"; };
 		DC235B081838FF3900070F2E /* schemeApps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schemeApps.json; sourceTree = "<group>"; };
 		DC235B0B183907DC00070F2E /* startbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startbutton@2x.png"; sourceTree = "<group>"; };
+		DC235B1218390FB400070F2E /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
+		DC235B1318390FB400070F2E /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 			children = (
 				DC235AFE1838E88D00070F2E /* UIDevice+ProcessesAdditions.h */,
 				DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */,
+				DC235B1218390FB400070F2E /* MZTimerLabel.h */,
+				DC235B1318390FB400070F2E /* MZTimerLabel.m */,
 				DC235B051838FF3900070F2E /* iHasApp */,
 				DC235ACC1838E72500070F2E /* SelfControl */,
 				DC235AEE1838E72500070F2E /* SelfControlTests */,
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC235B091838FF3900070F2E /* iHasApp.m in Sources */,
+				DC235B1418390FB400070F2E /* MZTimerLabel.m in Sources */,
 				DC235AE01838E72500070F2E /* ViewController.m in Sources */,
 				DC235AD71838E72500070F2E /* AppDelegate.m in Sources */,
 				DC235AD31838E72500070F2E /* main.m in Sources */,
@@ -506,6 +512,7 @@
 				DC235AFA1838E72500070F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC235AFB1838E72500070F2E /* Build configuration list for PBXNativeTarget "SelfControlTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +521,7 @@
 				DC235AFD1838E72500070F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

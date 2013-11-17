@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
 
 @interface ViewController : UIViewController
 
@@ -16,7 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *timerLabel;
 @property (strong, nonatomic) IBOutlet UISlider *timeSlider;
 @property (strong, nonatomic) IBOutlet UIButton *startButton;
-@property (strong, nonatomic) AppDelegate *appDelegate;
+@property (strong, nonatomic) IBOutlet UILabel *countdownLabel;
+
 - (IBAction) sliderValueChanged:(id)sender;
 
 @end

@@ -35,10 +35,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="startbutton.png" backgroundImage="startbutton.png"/>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJe-gO-GvB">
+                                <rect key="frame" x="20" y="403" width="280" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="countdownLabel" destination="fJe-gO-GvB" id="WRB-et-ozJ"/>
                         <outlet property="startButton" destination="5LK-et-yih" id="aA3-Ev-q2U"/>
                         <outlet property="timeSlider" destination="Iq5-ez-sJu" id="2bq-wo-mhq"/>
                         <outlet property="timerLabel" destination="jn7-OI-AUy" id="2LW-ST-xEp"/>

@@ -9,14 +9,16 @@
 #import "ViewController.h"
 #import "UIDevice+ProcessesAdditions.h"
 #import "iHasApp.h"
+#import "AppDelegate.h"
+#import "MZTimerLabel.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) AppDelegate *appDelegate;
 @end
 
 @implementation ViewController
 
-@synthesize detectedApps,timerLabel,timeSlider,startButton,appDelegate;
+@synthesize detectedApps,timerLabel,timeSlider,startButton,appDelegate,countdownLabel;
 
 - (void)viewDidLoad
 {
@@ -29,13 +31,17 @@
     self.startButton.clipsToBounds = YES;
     
     self.startButton.layer.cornerRadius = 50;//half of the width
+    self.countdownLabel.hidden = YES;
     
     if (appDelegate.currentlyActive == YES) {
         self.startButton.enabled = NO;
         self.startButton.hidden = YES;
         
+        self.countdownLabel.hidden = NO;
         //show the countdown timer instead
-        
+        MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:countdownLabel andTimerType:MZTimerLabelTypeTimer];
+        [timer setCountDownTime:(self.appDelegate.expirationTimestamp - [[NSDate date] timeIntervalSince1970]/1)];
+        [timer start];
     }
     
     
@@ -49,10 +55,19 @@
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
     
     
+    
     int expirationInt = (self.timeSlider.value/1) + [[NSDate date] timeIntervalSince1970];
     NSString *myExp = [NSString stringWithFormat:@"%i",expirationInt];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:myExp forKey:@"expiration"];
+    
+    self.appDelegate.expirationTimestamp = expirationInt;
+    self.appDelegate.currentlyActive = YES;
+    self.countdownLabel.hidden = NO;
+    //show the countdown timer instead
+    MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:countdownLabel andTimerType:MZTimerLabelTypeTimer];
+    [timer setCountDownTime:(self.appDelegate.expirationTimestamp - [[NSDate date] timeIntervalSince1970]/1)];
+    [timer start];
 }
 - (void)detectApps
 {
