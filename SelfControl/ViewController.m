@@ -100,13 +100,13 @@
     NSLog(@"called");
     NSArray * processes = [[UIDevice currentDevice] getActiveApps];
     //NSArray * processes = [[UIDevice currentDevice] runningProcesses];
-    NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram",@"Facebook Messenger",@"Vine", nil];
+    NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram",@"Messenger", nil];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     for (NSDictionary * dict in processes){
         NSLog(@"%@",dict);
         NSString *processName = [dict objectForKey:@"ProcessName"];
         //NSLog(@"%@",processName);
-        if ([keywords containsObject:processName] && [[dict objectForKey:@"isFrontmost"] integerValue] ==1) {
+        if (([keywords containsObject:processName] || [[dict objectForKey:@"AppID"] isEqualToString:@"com.vine.iphone"]) && [[dict objectForKey:@"isFrontmost"] integerValue] ==1) {
             
             UILocalNotification *local = [[UILocalNotification alloc] init];
             
@@ -115,9 +115,13 @@
             local.timeZone = [NSTimeZone defaultTimeZone];
             
             // set notification details
+            if ([[dict objectForKey:@"AppID"] isEqualToString:@"com.vine.iphone"]) {
+                local.alertBody = [NSString stringWithFormat:@"Close Vine!"];
+                local.alertAction = @"Okay!";
+            } else {
             local.alertBody = [NSString stringWithFormat:@"Close %@!",processName];
             local.alertAction = @"Okay!";
-            
+            }
             
             local.soundName = [NSString stringWithFormat:@"Default.caf"];
             
