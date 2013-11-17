@@ -18,5 +18,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *countdownLabel;
 
 - (IBAction) sliderValueChanged:(id)sender;
+- (IBAction)startSelfControl:(id)sender;
 
 @end

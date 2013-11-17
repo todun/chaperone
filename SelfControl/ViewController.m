@@ -26,22 +26,25 @@
     appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
     self.startButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.startButton setImage:[UIImage imageNamed:@"startbutton.png"] forState:UIControlStateNormal];
-    [self.startButton addTarget:self action:@selector(startSelfControl) forControlEvents:UIControlEventTouchUpInside];
+    [self.startButton addTarget:self action:@selector(startSelfControl:) forControlEvents:UIControlEventTouchUpInside];
     self.startButton.alpha = 1.0;
+    self.timeSlider.alpha = 1.0;
     self.startButton.clipsToBounds = YES;
     
     self.startButton.layer.cornerRadius = 50;//half of the width
-    self.countdownLabel.hidden = YES;
+    self.countdownLabel.alpha = 0.0;
     
     if (appDelegate.currentlyActive == YES) {
-        self.startButton.enabled = NO;
-        self.startButton.hidden = YES;
+        self.startButton.alpha = 0.0;
+        self.timeSlider.hidden = YES;
         
         self.countdownLabel.hidden = NO;
         //show the countdown timer instead
         MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:countdownLabel andTimerType:MZTimerLabelTypeTimer];
         [timer setCountDownTime:(self.appDelegate.expirationTimestamp - [[NSDate date] timeIntervalSince1970]/1)];
         [timer start];
+    } else {
+        
     }
     
     
@@ -50,11 +53,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)startSelfControl
+- (IBAction)startSelfControl:(id)sender
 {
+    NSLog(@"started");
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
-    
-    
     
     int expirationInt = (self.timeSlider.value/1) + [[NSDate date] timeIntervalSince1970];
     NSString *myExp = [NSString stringWithFormat:@"%i",expirationInt];
@@ -63,11 +65,16 @@
     
     self.appDelegate.expirationTimestamp = expirationInt;
     self.appDelegate.currentlyActive = YES;
-    self.countdownLabel.hidden = NO;
+    
     //show the countdown timer instead
     MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:countdownLabel andTimerType:MZTimerLabelTypeTimer];
     [timer setCountDownTime:(self.appDelegate.expirationTimestamp - [[NSDate date] timeIntervalSince1970]/1)];
     [timer start];
+    self.countdownLabel.alpha = 1.0;
+    self.startButton.alpha = 0.0;
+    self.timeSlider.alpha = 0.0;
+    self.timerLabel.alpha = 0.0;
+
 }
 - (void)detectApps
 {
