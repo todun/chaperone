@@ -101,13 +101,13 @@
     NSArray * processes = [[UIDevice currentDevice] getActiveApps];
     //NSArray * processes = [[UIDevice currentDevice] runningProcesses];
     NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram", nil];
-    
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     for (NSDictionary * dict in processes){
         NSLog(@"%@",dict);
         NSString *processName = [dict objectForKey:@"ProcessName"];
         //NSLog(@"%@",processName);
         if ([keywords containsObject:processName] && [[dict objectForKey:@"isFrontmost"] integerValue] ==1) {
-
+            
             UILocalNotification *local = [[UILocalNotification alloc] init];
             
             // create date/time information
