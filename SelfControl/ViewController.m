@@ -36,8 +36,10 @@
     
     if (appDelegate.currentlyActive == YES) {
         self.startButton.alpha = 0.0;
+        self.startButton.hidden = YES;
         self.timeSlider.hidden = YES;
-        
+        self.timerLabel.alpha = 0.0;
+        self.countdownLabel.alpha = 1.0;
         self.countdownLabel.hidden = NO;
         //show the countdown timer instead
         MZTimerLabel *timer = [[MZTimerLabel alloc] initWithLabel:countdownLabel andTimerType:MZTimerLabelTypeTimer];
