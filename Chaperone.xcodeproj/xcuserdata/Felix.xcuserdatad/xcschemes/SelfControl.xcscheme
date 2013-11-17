@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC235AC21838E72500070F2E"
                BuildableName = "SelfControl.app"
-               BlueprintName = "SelfControl"
-               ReferencedContainer = "container:SelfControl.xcodeproj">
+               BlueprintName = "Chaperone"
+               ReferencedContainer = "container:Chaperone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC235AE61838E72500070F2E"
                BuildableName = "SelfControlTests.xctest"
-               BlueprintName = "SelfControlTests"
-               ReferencedContainer = "container:SelfControl.xcodeproj">
+               BlueprintName = "ChaperoneTests"
+               ReferencedContainer = "container:Chaperone.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC235AC21838E72500070F2E"
             BuildableName = "SelfControl.app"
-            BlueprintName = "SelfControl"
-            ReferencedContainer = "container:SelfControl.xcodeproj">
+            BlueprintName = "Chaperone"
+            ReferencedContainer = "container:Chaperone.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC235AC21838E72500070F2E"
             BuildableName = "SelfControl.app"
-            BlueprintName = "SelfControl"
-            ReferencedContainer = "container:SelfControl.xcodeproj">
+            BlueprintName = "Chaperone"
+            ReferencedContainer = "container:Chaperone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC235AC21838E72500070F2E"
             BuildableName = "SelfControl.app"
-            BlueprintName = "SelfControl"
-            ReferencedContainer = "container:SelfControl.xcodeproj">
+            BlueprintName = "Chaperone"
+            ReferencedContainer = "container:Chaperone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

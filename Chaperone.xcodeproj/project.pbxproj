@@ -46,14 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC235AC31838E72500070F2E /* SelfControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC235AC31838E72500070F2E /* Chaperone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chaperone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC235AC61838E72500070F2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC235AC81838E72500070F2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DC235ACA1838E72500070F2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DC235ACE1838E72500070F2E /* SelfControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfControl-Info.plist"; sourceTree = "<group>"; };
+		DC235ACE1838E72500070F2E /* Chaperone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chaperone-Info.plist"; sourceTree = "<group>"; };
 		DC235AD01838E72500070F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC235AD21838E72500070F2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DC235AD41838E72500070F2E /* SelfControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfControl-Prefix.pch"; sourceTree = "<group>"; };
+		DC235AD41838E72500070F2E /* Chaperone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chaperone-Prefix.pch"; sourceTree = "<group>"; };
 		DC235AD51838E72500070F2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC235AD61838E72500070F2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DC235AD91838E72500070F2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 		DC235ADE1838E72500070F2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DC235ADF1838E72500070F2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DC235AE11838E72500070F2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DC235AE71838E72500070F2E /* SelfControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC235AE71838E72500070F2E /* ChaperoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaperoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC235AE81838E72500070F2E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DC235AF01838E72500070F2E /* SelfControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfControlTests-Info.plist"; sourceTree = "<group>"; };
+		DC235AF01838E72500070F2E /* ChaperoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChaperoneTests-Info.plist"; sourceTree = "<group>"; };
 		DC235AF21838E72500070F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC235AF41838E72500070F2E /* SelfControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfControlTests.m; sourceTree = "<group>"; };
 		DC235AFE1838E88D00070F2E /* UIDevice+ProcessesAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ProcessesAdditions.h"; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 		DC235AC41838E72500070F2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC235AC31838E72500070F2E /* SelfControl.app */,
-				DC235AE71838E72500070F2E /* SelfControlTests.xctest */,
+				DC235AC31838E72500070F2E /* Chaperone.app */,
+				DC235AE71838E72500070F2E /* ChaperoneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,10 +166,10 @@
 		DC235ACD1838E72500070F2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DC235ACE1838E72500070F2E /* SelfControl-Info.plist */,
+				DC235ACE1838E72500070F2E /* Chaperone-Info.plist */,
 				DC235ACF1838E72500070F2E /* InfoPlist.strings */,
 				DC235AD21838E72500070F2E /* main.m */,
-				DC235AD41838E72500070F2E /* SelfControl-Prefix.pch */,
+				DC235AD41838E72500070F2E /* Chaperone-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 		DC235AEF1838E72500070F2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DC235AF01838E72500070F2E /* SelfControlTests-Info.plist */,
+				DC235AF01838E72500070F2E /* ChaperoneTests-Info.plist */,
 				DC235AF11838E72500070F2E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -205,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC235AC21838E72500070F2E /* SelfControl */ = {
+		DC235AC21838E72500070F2E /* Chaperone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC235AF81838E72500070F2E /* Build configuration list for PBXNativeTarget "SelfControl" */;
+			buildConfigurationList = DC235AF81838E72500070F2E /* Build configuration list for PBXNativeTarget "Chaperone" */;
 			buildPhases = (
 				DC235ABF1838E72500070F2E /* Sources */,
 				DC235AC01838E72500070F2E /* Frameworks */,
@@ -217,14 +217,14 @@
 			);
 			dependencies = (
 			);
-			name = SelfControl;
+			name = Chaperone;
 			productName = SelfControl;
-			productReference = DC235AC31838E72500070F2E /* SelfControl.app */;
+			productReference = DC235AC31838E72500070F2E /* Chaperone.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC235AE61838E72500070F2E /* SelfControlTests */ = {
+		DC235AE61838E72500070F2E /* ChaperoneTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC235AFB1838E72500070F2E /* Build configuration list for PBXNativeTarget "SelfControlTests" */;
+			buildConfigurationList = DC235AFB1838E72500070F2E /* Build configuration list for PBXNativeTarget "ChaperoneTests" */;
 			buildPhases = (
 				DC235AE31838E72500070F2E /* Sources */,
 				DC235AE41838E72500070F2E /* Frameworks */,
@@ -235,9 +235,9 @@
 			dependencies = (
 				DC235AED1838E72500070F2E /* PBXTargetDependency */,
 			);
-			name = SelfControlTests;
+			name = ChaperoneTests;
 			productName = SelfControlTests;
-			productReference = DC235AE71838E72500070F2E /* SelfControlTests.xctest */;
+			productReference = DC235AE71838E72500070F2E /* ChaperoneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +254,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC235ABE1838E72500070F2E /* Build configuration list for PBXProject "SelfControl" */;
+			buildConfigurationList = DC235ABE1838E72500070F2E /* Build configuration list for PBXProject "Chaperone" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -267,8 +267,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC235AC21838E72500070F2E /* SelfControl */,
-				DC235AE61838E72500070F2E /* SelfControlTests */,
+				DC235AC21838E72500070F2E /* Chaperone */,
+				DC235AE61838E72500070F2E /* ChaperoneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,7 +330,7 @@
 /* Begin PBXTargetDependency section */
 		DC235AED1838E72500070F2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC235AC21838E72500070F2E /* SelfControl */;
+			target = DC235AC21838E72500070F2E /* Chaperone */;
 			targetProxy = DC235AEC1838E72500070F2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,9 +451,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SelfControl/SelfControl-Prefix.pch";
-				INFOPLIST_FILE = "SelfControl/SelfControl-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SelfControl/Chaperone-Prefix.pch";
+				INFOPLIST_FILE = "SelfControl/Chaperone-Info.plist";
+				PRODUCT_NAME = Chaperone;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -464,9 +464,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SelfControl/SelfControl-Prefix.pch";
-				INFOPLIST_FILE = "SelfControl/SelfControl-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SelfControl/Chaperone-Prefix.pch";
+				INFOPLIST_FILE = "SelfControl/Chaperone-Info.plist";
+				PRODUCT_NAME = Chaperone;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -487,8 +487,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SelfControlTests/SelfControlTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SelfControlTests/ChaperoneTests-Info.plist";
+				PRODUCT_NAME = ChaperoneTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -506,8 +506,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SelfControl/SelfControl-Prefix.pch";
-				INFOPLIST_FILE = "SelfControlTests/SelfControlTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "SelfControlTests/ChaperoneTests-Info.plist";
+				PRODUCT_NAME = ChaperoneTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -516,7 +516,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC235ABE1838E72500070F2E /* Build configuration list for PBXProject "SelfControl" */ = {
+		DC235ABE1838E72500070F2E /* Build configuration list for PBXProject "Chaperone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC235AF61838E72500070F2E /* Debug */,
@@ -525,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC235AF81838E72500070F2E /* Build configuration list for PBXNativeTarget "SelfControl" */ = {
+		DC235AF81838E72500070F2E /* Build configuration list for PBXNativeTarget "Chaperone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC235AF91838E72500070F2E /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC235AFB1838E72500070F2E /* Build configuration list for PBXNativeTarget "SelfControlTests" */ = {
+		DC235AFB1838E72500070F2E /* Build configuration list for PBXNativeTarget "ChaperoneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC235AFC1838E72500070F2E /* Debug */,
