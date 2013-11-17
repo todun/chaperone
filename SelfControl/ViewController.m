@@ -58,7 +58,7 @@
     NSLog(@"started");
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
     
-    int expirationInt = (self.timeSlider.value/1) + [[NSDate date] timeIntervalSince1970];
+    int expirationInt = (self.timeSlider.value*60/1) + [[NSDate date] timeIntervalSince1970];
     NSString *myExp = [NSString stringWithFormat:@"%i",expirationInt];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:myExp forKey:@"expiration"];
@@ -100,7 +100,7 @@
     NSLog(@"called");
     NSArray * processes = [[UIDevice currentDevice] getActiveApps];
     //NSArray * processes = [[UIDevice currentDevice] runningProcesses];
-    NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram", nil];
+    NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram",@"Facebook Messenger",@"Vine", nil];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     for (NSDictionary * dict in processes){
         NSLog(@"%@",dict);

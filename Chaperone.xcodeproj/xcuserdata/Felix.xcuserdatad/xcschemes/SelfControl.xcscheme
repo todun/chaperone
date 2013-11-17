@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC235AC21838E72500070F2E"
-               BuildableName = "SelfControl.app"
+               BuildableName = "Chaperone.app"
                BlueprintName = "Chaperone"
                ReferencedContainer = "container:Chaperone.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC235AE61838E72500070F2E"
-               BuildableName = "SelfControlTests.xctest"
+               BuildableName = "ChaperoneTests.xctest"
                BlueprintName = "ChaperoneTests"
                ReferencedContainer = "container:Chaperone.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC235AC21838E72500070F2E"
-            BuildableName = "SelfControl.app"
+            BuildableName = "Chaperone.app"
             BlueprintName = "Chaperone"
             ReferencedContainer = "container:Chaperone.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC235AC21838E72500070F2E"
-            BuildableName = "SelfControl.app"
+            BuildableName = "Chaperone.app"
             BlueprintName = "Chaperone"
             ReferencedContainer = "container:Chaperone.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC235AC21838E72500070F2E"
-            BuildableName = "SelfControl.app"
+            BuildableName = "Chaperone.app"
             BlueprintName = "Chaperone"
             ReferencedContainer = "container:Chaperone.xcodeproj">
          </BuildableReference>
