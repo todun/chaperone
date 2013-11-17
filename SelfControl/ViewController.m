@@ -71,10 +71,10 @@
     [timer setCountDownTime:(self.appDelegate.expirationTimestamp - [[NSDate date] timeIntervalSince1970]/1)];
     [timer start];
     self.countdownLabel.alpha = 1.0;
-    self.startButton.alpha = 0.0;
+    [[self.view viewWithTag:256] removeFromSuperview];
     self.timeSlider.alpha = 0.0;
     self.timerLabel.alpha = 0.0;
-
+    [self.view setNeedsDisplay];
 }
 - (void)detectApps
 {
