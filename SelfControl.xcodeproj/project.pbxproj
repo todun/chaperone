@@ -28,6 +28,11 @@
 		DC235B0A1838FF3900070F2E /* schemeApps.json in Resources */ = {isa = PBXBuildFile; fileRef = DC235B081838FF3900070F2E /* schemeApps.json */; };
 		DC235B0C183907DC00070F2E /* startbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B0B183907DC00070F2E /* startbutton@2x.png */; };
 		DC235B1418390FB400070F2E /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235B1318390FB400070F2E /* MZTimerLabel.m */; };
+		DC235B191839174000070F2E /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B151839174000070F2E /* facebook@2x.png */; };
+		DC235B1A1839174000070F2E /* instagram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B161839174000070F2E /* instagram@2x.png */; };
+		DC235B1B1839174000070F2E /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B171839174000070F2E /* twitter@2x.png */; };
+		DC235B1C1839174000070F2E /* vine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B181839174000070F2E /* vine@2x.png */; };
+		DC235B1E183917BE00070F2E /* chaperone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B1D183917BE00070F2E /* chaperone@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		DC235B0B183907DC00070F2E /* startbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startbutton@2x.png"; sourceTree = "<group>"; };
 		DC235B1218390FB400070F2E /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
 		DC235B1318390FB400070F2E /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
+		DC235B151839174000070F2E /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook@2x.png"; path = "../../../Downloads/facebook@2x.png"; sourceTree = "<group>"; };
+		DC235B161839174000070F2E /* instagram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "instagram@2x.png"; path = "../../../Downloads/instagram@2x.png"; sourceTree = "<group>"; };
+		DC235B171839174000070F2E /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "../../../Downloads/twitter@2x.png"; sourceTree = "<group>"; };
+		DC235B181839174000070F2E /* vine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vine@2x.png"; path = "../../../Downloads/vine@2x.png"; sourceTree = "<group>"; };
+		DC235B1D183917BE00070F2E /* chaperone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chaperone@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,11 @@
 		DC235ACC1838E72500070F2E /* SelfControl */ = {
 			isa = PBXGroup;
 			children = (
+				DC235B151839174000070F2E /* facebook@2x.png */,
+				DC235B1D183917BE00070F2E /* chaperone@2x.png */,
+				DC235B161839174000070F2E /* instagram@2x.png */,
+				DC235B171839174000070F2E /* twitter@2x.png */,
+				DC235B181839174000070F2E /* vine@2x.png */,
 				DC235B0B183907DC00070F2E /* startbutton@2x.png */,
 				DC235B011838F51900070F2E /* default.caf */,
 				DC235AD51838E72500070F2E /* AppDelegate.h */,
@@ -263,12 +278,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC235B1B1839174000070F2E /* twitter@2x.png in Resources */,
 				DC235ADD1838E72500070F2E /* Main_iPad.storyboard in Resources */,
+				DC235B1C1839174000070F2E /* vine@2x.png in Resources */,
 				DC235AE21838E72500070F2E /* Images.xcassets in Resources */,
 				DC235B0C183907DC00070F2E /* startbutton@2x.png in Resources */,
 				DC235B0A1838FF3900070F2E /* schemeApps.json in Resources */,
 				DC235ADA1838E72500070F2E /* Main_iPhone.storyboard in Resources */,
 				DC235B021838F51900070F2E /* default.caf in Resources */,
+				DC235B1A1839174000070F2E /* instagram@2x.png in Resources */,
+				DC235B191839174000070F2E /* facebook@2x.png in Resources */,
+				DC235B1E183917BE00070F2E /* chaperone@2x.png in Resources */,
 				DC235AD11838E72500070F2E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
