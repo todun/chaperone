@@ -7,13 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "UIDevice+ProcessesAdditions.h"
 
 @implementation AppDelegate
+@synthesize myVC;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     return YES;
+    myVC = [[ViewController alloc] init];
+    //[NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -24,9 +29,58 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    UIApplication* myApplication = [UIApplication sharedApplication];
+    [myApplication beginBackgroundTaskWithExpirationHandler:^{
+        // Clean up any unfinished task business by marking where you
+        // stopped or ending the task outright.
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
+        
+    }];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
+
+
+- (void)testMethod:(NSTimer*)timer
+{
+    NSLog(@"called");
+    NSArray * processes = [[UIDevice currentDevice] getActiveApps];
+    //NSArray * processes = [[UIDevice currentDevice] runningProcesses];
+    NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram", nil];
+    
+    for (NSDictionary * dict in processes){
+        //NSLog(@"%@",dict);
+        NSString *processName = [dict objectForKey:@"ProcessName"];
+        //NSLog(@"%@",processName);
+        if ([keywords containsObject:processName]) {
+            NSLog(@"%@ is currently running.",processName);
+            
+            UILocalNotification *local = [[UILocalNotification alloc] init];
+            
+            // create date/time information
+            local.fireDate = [NSDate dateWithTimeIntervalSinceNow:1]; //time in seconds
+            local.timeZone = [NSTimeZone defaultTimeZone];
+            
+            // set notification details
+            local.alertBody = [NSString stringWithFormat:@"Close %@!",processName];
+            local.alertAction = @"Okay!";
+            
+            
+            local.soundName = [NSString stringWithFormat:@"Default.caf"];
+            
+            // Gather any custom data you need to save with the notification
+            NSDictionary *customInfo =
+            [NSDictionary dictionaryWithObject:@"ABCD1234" forKey:@"yourKey"];
+            local.userInfo = customInfo;
+            
+            // Schedule it!
+            [[UIApplication sharedApplication] scheduleLocalNotification:local];
+        }
+        //NSLog(@"%@ - %@", [dict objectForKey:@"ProcessID"], [dict objectForKey:@"ProcessName"]);
+    }
+    
+}
+
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {

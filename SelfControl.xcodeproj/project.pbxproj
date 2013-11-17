@@ -22,6 +22,8 @@
 		DC235AEB1838E72500070F2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC235ACA1838E72500070F2E /* UIKit.framework */; };
 		DC235AF31838E72500070F2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC235AF11838E72500070F2E /* InfoPlist.strings */; };
 		DC235AF51838E72500070F2E /* SelfControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235AF41838E72500070F2E /* SelfControlTests.m */; };
+		DC235B001838E88D00070F2E /* UIDevice+ProcessesAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */; };
+		DC235B021838F51900070F2E /* default.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC235B011838F51900070F2E /* default.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		DC235AF01838E72500070F2E /* SelfControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SelfControlTests-Info.plist"; sourceTree = "<group>"; };
 		DC235AF21838E72500070F2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC235AF41838E72500070F2E /* SelfControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelfControlTests.m; sourceTree = "<group>"; };
+		DC235AFE1838E88D00070F2E /* UIDevice+ProcessesAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ProcessesAdditions.h"; sourceTree = "<group>"; };
+		DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ProcessesAdditions.m"; sourceTree = "<group>"; };
+		DC235B011838F51900070F2E /* default.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,8 @@
 		DC235ABA1838E72500070F2E = {
 			isa = PBXGroup;
 			children = (
+				DC235AFE1838E88D00070F2E /* UIDevice+ProcessesAdditions.h */,
+				DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */,
 				DC235ACC1838E72500070F2E /* SelfControl */,
 				DC235AEE1838E72500070F2E /* SelfControlTests */,
 				DC235AC51838E72500070F2E /* Frameworks */,
@@ -114,6 +121,7 @@
 		DC235ACC1838E72500070F2E /* SelfControl */ = {
 			isa = PBXGroup;
 			children = (
+				DC235B011838F51900070F2E /* default.caf */,
 				DC235AD51838E72500070F2E /* AppDelegate.h */,
 				DC235AD61838E72500070F2E /* AppDelegate.m */,
 				DC235AD81838E72500070F2E /* Main_iPhone.storyboard */,
@@ -234,6 +242,7 @@
 				DC235ADD1838E72500070F2E /* Main_iPad.storyboard in Resources */,
 				DC235AE21838E72500070F2E /* Images.xcassets in Resources */,
 				DC235ADA1838E72500070F2E /* Main_iPhone.storyboard in Resources */,
+				DC235B021838F51900070F2E /* default.caf in Resources */,
 				DC235AD11838E72500070F2E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +265,7 @@
 				DC235AE01838E72500070F2E /* ViewController.m in Sources */,
 				DC235AD71838E72500070F2E /* AppDelegate.m in Sources */,
 				DC235AD31838E72500070F2E /* main.m in Sources */,
+				DC235B001838E88D00070F2E /* UIDevice+ProcessesAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
