@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIDevice+ProcessesAdditions.h"
+#import "iHasApp.h"
 
 @interface ViewController ()
 
@@ -15,31 +16,76 @@
 
 @implementation ViewController
 
+@synthesize detectedApps,timerLabel,timeSlider,startButton,appDelegate;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    self.startButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.startButton setImage:[UIImage imageNamed:@"startbutton.png"] forState:UIControlStateNormal];
+    [self.startButton addTarget:self action:@selector(startSelfControl) forControlEvents:UIControlEventTouchUpInside];
+    self.startButton.alpha = 1.0;
+    self.startButton.clipsToBounds = YES;
     
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(testMethod:) userInfo:nil repeats:YES]; // the interval is in seconds...
+    self.startButton.layer.cornerRadius = 50;//half of the width
     
-    //[self testMethod];
+    if (appDelegate.currentlyActive == YES) {
+        self.startButton.enabled = NO;
+        self.startButton.hidden = YES;
+        
+        //show the countdown timer instead
+        
+    }
+    
+    
+     // the interval is in seconds...
+    //[self detectApps];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)startSelfControl
+{
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
+    
+    
+    int expirationInt = (self.timeSlider.value/1) + [[NSDate date] timeIntervalSince1970];
+    NSString *myExp = [NSString stringWithFormat:@"%i",expirationInt];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:myExp forKey:@"expiration"];
+}
+- (void)detectApps
+{
+    iHasApp *detectionObject = [[iHasApp alloc] init];
+    [detectionObject detectAppDictionariesWithIncremental:^(NSArray *appDictionaries) {
+        //NSLog(@"Incremental appDictionaries.count: %i", appDictionaries.count);
+    } withSuccess:^(NSArray *appDictionaries) {
+        //NSLog(@"Successful appDictionaries.count: %i", appDictionaries.count);
+        self.detectedApps = appDictionaries;
+        //NSLog(@"%@",self.detectedApps);
+    } withFailure:^(NSError *error) {
+        //NSLog(@"Failure: %@", error.localizedDescription);
+    }];
 }
 
 - (void)testMethod:(NSTimer *)timer
 {
+    int currentTime = [[NSDate date] timeIntervalSince1970]/1;
+    if (currentTime > appDelegate.expirationTimestamp && appDelegate.expirationTimestamp > 100000) {
+        [timer invalidate];
+    }
+    
     NSLog(@"called");
     NSArray * processes = [[UIDevice currentDevice] getActiveApps];
     //NSArray * processes = [[UIDevice currentDevice] runningProcesses];
     NSArray *keywords = [NSArray arrayWithObjects:@"Facebook",@"Twitter",@"Instagram", nil];
     
     for (NSDictionary * dict in processes){
-        //NSLog(@"%@",dict);
+        NSLog(@"%@",dict);
         NSString *processName = [dict objectForKey:@"ProcessName"];
         //NSLog(@"%@",processName);
-        if ([keywords containsObject:processName]) {
-            NSLog(@"%@ is currently running.",processName);
-            
-            //
+        if ([keywords containsObject:processName] && [[dict objectForKey:@"isFrontmost"] integerValue] ==1) {
+
             UILocalNotification *local = [[UILocalNotification alloc] init];
             
             // create date/time information
@@ -68,6 +114,19 @@
     
 }
 
+- (IBAction)sliderValueChanged:(id)sender
+{
+    int value = [(UISlider*)sender value];
+    NSString *labelText = @"";
+    if (value < 60) {
+        labelText = [labelText stringByAppendingFormat:@"%i min",value%60];
+    } else if (value < 120) {
+        labelText = [labelText stringByAppendingFormat:@"%i hour %i min",value/60,value%60];
+    } else {
+        labelText = [labelText stringByAppendingFormat:@"%i hours %i min",value/60,value%60];
+    }
+    timerLabel.text = labelText;
+}
 
 
 - (void)didReceiveMemoryWarning

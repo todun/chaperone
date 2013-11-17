@@ -24,6 +24,9 @@
 		DC235AF51838E72500070F2E /* SelfControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235AF41838E72500070F2E /* SelfControlTests.m */; };
 		DC235B001838E88D00070F2E /* UIDevice+ProcessesAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */; };
 		DC235B021838F51900070F2E /* default.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC235B011838F51900070F2E /* default.caf */; };
+		DC235B091838FF3900070F2E /* iHasApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DC235B071838FF3900070F2E /* iHasApp.m */; };
+		DC235B0A1838FF3900070F2E /* schemeApps.json in Resources */ = {isa = PBXBuildFile; fileRef = DC235B081838FF3900070F2E /* schemeApps.json */; };
+		DC235B0C183907DC00070F2E /* startbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC235B0B183907DC00070F2E /* startbutton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,10 @@
 		DC235AFE1838E88D00070F2E /* UIDevice+ProcessesAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ProcessesAdditions.h"; sourceTree = "<group>"; };
 		DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ProcessesAdditions.m"; sourceTree = "<group>"; };
 		DC235B011838F51900070F2E /* default.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.caf; sourceTree = "<group>"; };
+		DC235B061838FF3900070F2E /* iHasApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHasApp.h; sourceTree = "<group>"; };
+		DC235B071838FF3900070F2E /* iHasApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHasApp.m; sourceTree = "<group>"; };
+		DC235B081838FF3900070F2E /* schemeApps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schemeApps.json; sourceTree = "<group>"; };
+		DC235B0B183907DC00070F2E /* startbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startbutton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +98,7 @@
 			children = (
 				DC235AFE1838E88D00070F2E /* UIDevice+ProcessesAdditions.h */,
 				DC235AFF1838E88D00070F2E /* UIDevice+ProcessesAdditions.m */,
+				DC235B051838FF3900070F2E /* iHasApp */,
 				DC235ACC1838E72500070F2E /* SelfControl */,
 				DC235AEE1838E72500070F2E /* SelfControlTests */,
 				DC235AC51838E72500070F2E /* Frameworks */,
@@ -121,6 +129,7 @@
 		DC235ACC1838E72500070F2E /* SelfControl */ = {
 			isa = PBXGroup;
 			children = (
+				DC235B0B183907DC00070F2E /* startbutton@2x.png */,
 				DC235B011838F51900070F2E /* default.caf */,
 				DC235AD51838E72500070F2E /* AppDelegate.h */,
 				DC235AD61838E72500070F2E /* AppDelegate.m */,
@@ -161,6 +170,16 @@
 				DC235AF11838E72500070F2E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC235B051838FF3900070F2E /* iHasApp */ = {
+			isa = PBXGroup;
+			children = (
+				DC235B061838FF3900070F2E /* iHasApp.h */,
+				DC235B071838FF3900070F2E /* iHasApp.m */,
+				DC235B081838FF3900070F2E /* schemeApps.json */,
+			);
+			path = iHasApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +260,8 @@
 			files = (
 				DC235ADD1838E72500070F2E /* Main_iPad.storyboard in Resources */,
 				DC235AE21838E72500070F2E /* Images.xcassets in Resources */,
+				DC235B0C183907DC00070F2E /* startbutton@2x.png in Resources */,
+				DC235B0A1838FF3900070F2E /* schemeApps.json in Resources */,
 				DC235ADA1838E72500070F2E /* Main_iPhone.storyboard in Resources */,
 				DC235B021838F51900070F2E /* default.caf in Resources */,
 				DC235AD11838E72500070F2E /* InfoPlist.strings in Resources */,
@@ -262,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC235B091838FF3900070F2E /* iHasApp.m in Sources */,
 				DC235AE01838E72500070F2E /* ViewController.m in Sources */,
 				DC235AD71838E72500070F2E /* AppDelegate.m in Sources */,
 				DC235AD31838E72500070F2E /* main.m in Sources */,

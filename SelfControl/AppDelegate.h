@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) ViewController *myVC;
-
+@property int expirationTimestamp;
+@property BOOL currentlyActive;
 @end

@@ -10,13 +10,28 @@
 #import "UIDevice+ProcessesAdditions.h"
 
 @implementation AppDelegate
-@synthesize myVC;
+@synthesize myVC,currentlyActive,expirationTimestamp;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![[defaults objectForKey:@"expiration"] isEqualToString:@""]) {
+        self.expirationTimestamp = [[defaults objectForKey:@"expiration"] integerValue];
+        
+        int currentTime = [[NSDate date] timeIntervalSince1970]/1;
+        
+        if (currentTime < self.expirationTimestamp) {
+            self.currentlyActive = YES;
+        } else {
+            self.currentlyActive = NO;
+        }
+    }
     return YES;
-    myVC = [[ViewController alloc] init];
+
+    //myVC = [[ViewController alloc] init];
     //[NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(testMethod:) userInfo:nil repeats:YES];
     
 }
